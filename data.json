@@ -1,0 +1,155 @@
+[
+    {
+        "name": "Mathematics",
+        "obtainable": "100",
+        "email": "john@example.com",
+        "scores": "60",
+        "grade": "B3",
+        "remark": "Good"
+    },
+
+    {
+        "name": "Physics",
+        "obtainable": "100",
+        "email": "john@example.com",
+        "scores": "90",
+        "grade": "A1",
+        "remark": "V.Good"
+    },
+
+    {
+        "name": "English",
+        "obtainable": "100",
+        "email": "john@example.com",
+        "scores": "58",
+        "grade": "C4",
+        "remark": "Pass"
+    },
+
+    {
+        "name": "Chemistry",
+        "obtainable": "100",
+        "email": "john@example.com",
+        "scores": "67",
+        "grade": "B2",
+        "remark": "Good"
+    },
+
+    {
+        "name": "Mathematics",
+        "obtainable": "100",
+        "email": "hn@example.com",
+        "scores": "60",
+        "grade": "B3",
+        "remark": "Good"
+    },
+
+    {
+        "name": "Physics",
+        "obtainable": "100",
+        "email": "hn@example.com",
+        "scores": "99",
+        "grade": "A1",
+        "remark": "V.Good"
+    },
+
+    {
+        "name": "English",
+        "obtainable": "100",
+        "email": "hn@example.com",
+        "scores": "76",
+        "grade": "A1",
+        "remark": "v.good"
+    },
+
+    {
+        "name": "Chemistry",
+        "obtainable": "100",
+        "email": "hn@example.com",
+        "scores": "50",
+        "grade": "C6",
+        "remark": "Pass"
+    },
+
+    {
+        "name": "Mathematics",
+        "obtainable": "100",
+        "email": "happinett@gmail.com",
+        "scores": "100",
+        "grade": "A+",
+        "remark": "Excellent"
+    },
+
+    {
+        "name": "English",
+        "obtainable": "100",
+        "email": "happinett@gmail.com",
+        "scores": "100",
+        "grade": "A+",
+        "remark": "Excellent"
+    },
+
+    {
+        "name": "Government",
+        "obtainable": "100",
+        "email": "happinett@gmail.com",
+        "scores": "100",
+        "grade": "A+",
+        "remark": "Excellent"
+    },
+
+    {
+        "name": "F.Accounting",
+        "obtainable": "100",
+        "email": "happinett@gmail.com",
+        "scores": "100",
+        "grade": "A+",
+        "remark": "Excellent"
+    },
+
+    {
+        "name": "Commerce",
+        "obtainable": "100",
+        "email": "happinett@gmail.com",
+        "scores": "100",
+        "grade": "A+",
+        "remark": "Excellent"
+    },
+
+
+    {
+        "name": "Mathematics",
+        "obtainable": "100",
+        "email": "5@gmail.com",
+        "scores": "60",
+        "grade": "B3",
+        "remark": "Good"
+    },
+
+    {
+        "name": "Physics",
+        "obtainable": "100",
+        "email": "5@gmail.com",
+        "scores": "90",
+        "grade": "A1",
+        "remark": "V.Good"
+    },
+
+    {
+        "name": "English",
+        "obtainable": "100",
+        "email": "5@gmail.com",
+        "scores": "58",
+        "grade": "C4",
+        "remark": "Pass"
+    },
+
+    {
+        "name": "Chemistry",
+        "obtainable": "100",
+        "email": "5@gmail.com",
+        "scores": "55",
+        "grade": "C5",
+        "remark": "Pass"
+    }
+]
