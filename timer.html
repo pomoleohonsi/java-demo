@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIMER</title>
+</head>
+
+<body>
+    <div>
+        <h4 id="myTime"></h4>
+        <p id="demo"></p>
+        <button onclick="startWatch()">START WATCH</button>
+        <button onclick="stopWatch()">STOP</button>
+        <h3 id="stwatch"></h3>
+    </div>
+
+    <script>
+        function getMyTime() {
+            const hr = new Date().getHours();
+            const mi = new Date().getMinutes();
+            const se = new Date().getSeconds();
+            const mil = new Date().getMilliseconds();
+            const d = hr + ":" + mi + ":" + se + ":" + mil;
+            document.getElementById("demo").innerHTML = d;
+        }
+
+        var x = setInterval(() => {
+            //getMyTime();
+        }, 1);
+
+        function startWatch() {
+            sessionStorage.stopWatch = 2;
+            let hr = 0;
+            let mi = 0;
+            let se = 0;
+            let ml = 0;
+
+            var x = setInterval(() => {
+                ml++;
+                if (ml == 1000){ //increment seconds
+                    se++;
+                    ml = 0;
+                }
+                if (se == 60){ //increment minutes
+                    mi++;
+                    se = 0;
+                }
+                if (mi == 60){ //increment hour
+                    hr++;
+                    mi = 0;
+                }
+                               
+                var t = hr + ":" + mi + ":" + se + ":" + ml;
+                document.getElementById("stwatch").innerHTML = t; 
+                var tv = sessionStorage.stopWatch;
+                if (tv == 1){
+                    clearInterval(x);
+                }
+                            
+            }, 1);
+        }
+
+        function stopWatch(){
+            sessionStorage.stopWatch = 1;
+            // location.reload();
+        }
+    </script>
+</body>
+
+</html>
