@@ -1,0 +1,18 @@
+[
+    {
+      "question": "What is the capital of France?",
+      "answers": ["Paris", "London", "Berlin"],
+      "correct_answers": [0]
+    },
+    {
+      "question": "Who wrote 'To Kill a Mockingbird'?",
+      "answers": ["Harper Lee", "Mark Twain", "J.K. Rowling"],
+      "correct_answers": [0]
+    },
+    {
+      "question": "What is the boiling point of water in Celsius?",
+      "answers": ["0", "50", "100"],
+      "correct_answers": [2]
+    }
+  ]
+  
