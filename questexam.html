@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+</head>
+<body>
+  
+    <div id="question"></div>
+    <form id="answersForm">
+      <!-- Replace checkboxes with radio buttons -->
+      <!-- Each group of radio buttons will have the same name -->
+      <label><input type="radio" name="answer" value="0"> Answer 1</label><br>
+      <label><input type="radio" name="answer" value="1"> Answer 2</label><br>
+      <label><input type="radio" name="answer" value="2"> Answer 3</label><br>
+    </form>
+    <button onclick="checkAnswer()">Check Answer</button>
+
+</body>
+
+<script>
+let questions;
+
+// Fetch the questions from the JSON file
+fetch('questss.json')
+  .then(response => response.json())
+  .then(data => {
+    questions = data;
+    // Display the first question when the JSON data is loaded
+    displayQuestion(0);
+  })
+  .catch(error => console.error('Error fetching questions:', error));
+
+function displayQuestion(index) {
+  const questionDiv = document.getElementById('question');
+  const answersForm = document.getElementById('answersForm');
+  const currentQuestion = questions[index];
+
+  questionDiv.textContent = currentQuestion.question;
+
+  // Clear previous answers
+  answersForm.innerHTML = '';
+
+  // Add radio buttons for each answer
+  currentQuestion.answers.forEach((answer, i) => {
+    const radio = document.createElement('input');
+    radio.type = 'radio';
+    radio.name = 'answer';
+    radio.value = i;
+    radio.id = 'answer' + i;
+
+    const label = document.createElement('label');
+    label.htmlFor = 'answer' + i;
+    label.appendChild(document.createTextNode(answer));
+
+    answersForm.appendChild(radio);
+    answersForm.appendChild(label);
+    answersForm.appendChild(document.createElement('br'));
+  });
+}
+
+function checkAnswer() {
+  const selectedAnswerIndex = document.querySelector('input[name="answer"]:checked');
+
+  if (!selectedAnswerIndex) {
+    alert('Please select an answer.');
+    return;
+  }
+
+  const selectedAnswer = parseInt(selectedAnswerIndex.value);
+  const currentQuestionIndex = 0; // Change this to track the current question index
+
+  const correctAnswerIndex = questions[currentQuestionIndex].correct_answers[0];
+
+  if (selectedAnswer === correctAnswerIndex) {
+    alert('Correct answer!');
+    // Move to the next question
+    displayQuestion(currentQuestionIndex + 1);
+} else {
+    alert('Incorrect answer. Try again!');
+}
+
+}
+
+</script>
+</html>
