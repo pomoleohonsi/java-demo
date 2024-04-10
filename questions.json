@@ -14,17 +14,125 @@
         
       ]
     },
-    "Science": {
+
+    "English": {
       "questions": [
         {
-          "question": "What is the chemical symbol for water?",
-          "options": ["A. H2O", "B. CO2", "C. O2", "D. NaCl"],
+          "question": "complete the sentences with the correct options from the list below: He told me to go on .... till seven",
+          "options": ["A. to work", "B. worked","C. works","D. working"],
+          "answer": "D"
+        },
+        {
+          "question": "Fill in the blank spaces in the following sentences making use of the best of the five options: He looked .... everyone in authority as an enemy",
+          "options": ["A. on","B. at","C. in","D. about"],
+          "answer": "B"
+        },
+        {
+          "question": "Fill in the blank spaces in the following sentences making use of the best of the five options: Asmau, did you see the snapshop of ....",
+          "options": ["A. Yourself","B. You","C. Yours","D. Yourselves"],
           "answer": "A"
         },
         {
-          "question": "What is the boiling point of water in Celsius?",
-          "options": ["A. 0°C", "B. 50°C", "C. 100°C", "D. 200°C"],
+          "question": "In the question below choose the option opposite in meaning to the word in capital: Disgruntled people are INDIFFERENT to any plans to rid the society of evil",
+          "options": ["A. different from","B. diffirent about","C. in agreement with","D. interested in"],
+          "answer": "D"
+        },
+        {
+          "question": "In the question below fill the gap with the appropriate option : It .... easier if he told us himself",
+          "options": ["A. would be","B. would have been","C. would had been","D. will be"],
+          "answer": "B"
+        }
+        
+      ]
+    },
+
+    "Biology": {
+      "questions": [
+        {
+          "question": "Unlike auxins, gibberellins",
+          "options": ["A. induces the formation of adventitious roots","B. do not affect leaf and fruit","C. cannot stimulate stem elongation","D. are quite effective as herbicides"],
+          "answer": "B"
+        },
+        {
+          "question": "Colonization of a bare rock surface is termed",
+          "options": ["A. evolution","B. specification","C. primary succession","D. secondary succession"],
           "answer": "C"
+        },
+        {
+          "question": "Which of the following factors can reduce the population of a community?",
+          "options": ["A. Immigration","B. edaphic","C. predation","D. mutualism"],
+          "answer": "C"
+        },
+        {
+          "question": "i 2/2, c 1/1, pm 2/2, m 3/3 The above dental formula represents the dentition of",
+          "options": ["A. cow","B. dog","C. man","D. rabbit"],
+          "answer": "C"
+        },
+        {
+          "question": "The major reason why foods should be properly covered is that",
+          "options": ["A. micro-organisms in air would contaminate the food","B. hot foods cool off easily when properly covered","C. the taste of the food is maintained when covered","D. all water easily evaporates from uncovered food"],
+          "answer": "A"
+        }
+        
+      ]
+    },
+
+    "Chemistry": {
+      "questions": [
+        {
+          "question": "Hypochlorous acid is used as a bleach because",
+          "options": ["A. it is a strong acid","B. it yields chlorine readily in pure water","C. it is an oxidising agent","D. it is a weak acid"],
+          "answer": "C"
+        },
+        {
+          "question": "In the purification of impure samples of ethyl ethanoate synthesized by esterification, concentrated sodium trioxocarbonate (IV) solution is used to remove",
+          "options": ["A. water","B. basic impurities","C. acidic impurities","D. ethoxyethane"],
+          "answer": "C"
+        },
+        {
+          "question": "The constituents of baking powder that makes the dough to rise is",
+          "options": ["A. NaHCO3","B. NaOH","C. Na2CO3","D. NaCl"],
+          "answer": "A"
+        },
+        {
+          "question": "The following glasswares are used to measure the volume of liquids EXCEPT",
+          "options": ["A. graduated beaker","B. pipette","C. test tube","D. burette"],
+          "answer": "C"
+        },
+        {
+          "question": "Calcium chloride is an ionic compound. Which of the following statements account for its ionic character? I. Calcium has high ionization energy.  II. Calcium has low ionization energy. III. Chlorine has high electron affinity. IV. Chlorine has high Ionization energy.",
+          "options": ["A. I and Il only", "B. I, II and IV only", "C. II, III and IV only", "D. I, II, III and IV"],
+          "answer": "C"
+        }
+        
+      ]
+    },
+    "Physics": {
+      "questions": [
+        {
+          "question": "An electric cell has an internal resistance of 2 ohms. A current of 0.5A is found to flow when a resistor of 5 ohms resistance is connected across it. What is the electromotive force of the cell?",
+          "options": ["A. 5 volts", "B. 3.5 volts","C. 2.5 volts","D. 1 volts","E. 10 volts"],
+          "answer": "B"
+        },
+        {
+          "question": "The specific latent heat of vaporization of a substance is always?",
+          "options": ["A. less than its specific latent heat of fusion","B. greater than its specific heat of fusion","C. equal to its specific latent heat of fusion","D. all of the above depending on the nature of the substance","E. none of the above"],
+          "answer": "B"
+        },
+        {
+          "question": "A slight loading of a tuning fork has the effect of",
+          "options": ["A. decreasing its amplitude","B. increasing its amplitude","C. decreasing its frequency","D. increasing its frequency"],
+          "answer": "C"
+        },
+        {
+          "question": "On which of the following factor does the viscosity of a liquid depend? i. Nature of the liquid. ii. Temperature of the liquid. iii. Area of the liquid surface",
+          "options": ["A. i and ii only","B. ii and iii only","C. i and iii only","D. i, ii and iii"],
+          "answer": "D"
+        },
+        {
+          "question": "Which of the following statements distinguishes thermal conduction for convection? i. Conduction requires a material medium while convection does not ii. In convection, there is actual motion of hot material, while in conduction, molecules molecules vibrates faster about their mean positions iii. Conduction takes place in solids while convection takes place in fluids.",
+          "options": ["A. i and ii only","B. ii and iii only","C. i and iii only","D. i, ii and iii"],
+          "answer": "B"
         }
         
       ]
