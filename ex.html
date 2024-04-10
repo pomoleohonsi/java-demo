@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Exam</title>
+</head>
+
+<body>
+
+    <h1>Take Exam</h1>
+
+    <p id="inst">Select your subjects:</p>
+
+    <div id="subjectCheckboxes">
+        <label><input type="checkbox" name="subject" value="Mathematics"> Mathematics</label><br>
+        <label><input type="checkbox" name="subject" value="Science"> Science</label><br>
+        <label><input type="checkbox" name="subject" value="History"> History</label><br>
+        <label><input type="checkbox" name="subject" value="Language"> Language</label><br>
+    </div>
+    <button id="next" onclick="next()">NEXT</button>
+    <button id="startExamBtn" style="display: none;">Start Exam</button>
+
+    <div id="examQuestions"></div>
+
+    <script>
+        function next() {
+            const checkboxes = document.querySelectorAll('input[name="subject"]:checked');
+            if (checkboxes.length < 2) {
+                alert('Please select at least two subjects.');
+                return;
+            }
+            document.getElementById('inst').innerHTML = "Please read the following instructions. The quiz is timed 40 minutes and when the timer runs out the quiz submits automatically. Your quiz consists of 2 subjects with 5 questions each. Good luck"
+            document.getElementById('startExamBtn').style.display = "block";
+            document.getElementById('subjectCheckboxes').style.display = "none";
+            document.getElementById('next').style.display = "none";
+
+            // Add event listener to the Start Exam button after it's displayed
+            document.getElementById('startExamBtn').addEventListener('click', function () {
+                
+                document.getElementById('inst').style.display = "none";
+                document.getElementById('startExamBtn').style.display = "none"
+
+                const selectedSubjects = Array.from(checkboxes).map(checkbox => checkbox.value);
+                loadQuestions(selectedSubjects);
+            });
+        }
+
+        function loadQuestions(selectedSubjects) {
+            fetch('questions.json')
+                .then(response => response.json())
+                .then(data => {
+                    const examQuestionsDiv = document.getElementById('examQuestions');
+                    examQuestionsDiv.innerHTML = ''; // Clear previous questions
+
+                    selectedSubjects.forEach(subject => {
+                        const subjectData = data[subject];
+                        if (subjectData) {
+                            const questions = subjectData.questions;
+                            const subjectHeading = document.createElement('h2');
+                            subjectHeading.textContent = subject;
+                            examQuestionsDiv.appendChild(subjectHeading);
+
+                            questions.forEach((questionData, index) => {
+                                const questionDiv = document.createElement('div');
+                                questionDiv.textContent = `Question ${index + 1}: ${questionData.question}`;
+                                examQuestionsDiv.appendChild(questionDiv);
+                            });
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading questions:', error);
+                });
+        }
+    </script>
+
+</body>
+
+</html>
