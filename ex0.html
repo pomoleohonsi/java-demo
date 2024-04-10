@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Exam</title>
+</head>
+
+<body>
+
+    <h1>Take Exam</h1>
+
+    <p id="inst">Select your subjects:</p>
+
+    <div id="subjectCheckboxes">
+        <label><input type="checkbox" name="subject" value="English"> English</label><br>
+        <label><input type="checkbox" name="subject" value="Mathematics"> Mathematics</label><br>
+        <label><input type="checkbox" name="subject" value="Chemistry"> Chemistry</label><br>
+        <label><input type="checkbox" name="subject" value="Physics"> Physics</label><br>
+        <label><input type="checkbox" name="subject" value="Biology"> Biology</label><br>
+        <label><input type="checkbox" name="subject" value="Economics">Economics</label><br>
+        <label><input type="checkbox" name="subject" value="Government">Government</label><br>
+        <label><input type="checkbox" name="subject" value="Literature">Literature</label><br>
+        <label><input type="checkbox" name="subject" value="Accounting">Accounting</label><br>
+        <label><input type="checkbox" name="subject" value="R.knowledge">Religious Knowledge</label><br>
+        <label><input type="checkbox" name="subject" value="Commerce">Commerce</label><br>
+        <label><input type="checkbox" name="subject" value="Computer">Computer Studies</label><br>
+        <label><input type="checkbox" name="subject" value="History">History</label><br>
+        <label><input type="checkbox" name="subject" value="Geography">Geography</label><br>
+        <label><input type="checkbox" name="subject" value="Agric">Agric</label><br>
+    </div>
+    <button id="next" onclick="next()">NEXT</button>
+    <button id="startExamBtn" style="display: none;">Start Exam</button>
+
+    <div id="examQuestions"></div>
+
+    <script>
+        function next() {
+            const checkboxes = document.querySelectorAll('input[name="subject"]:checked');
+            if (checkboxes.length < 2) {
+                alert('Please select at least two subjects.');
+                return;
+            }
+            document.getElementById('inst').innerHTML = "Please read the following instructions. The quiz is timed 40 minutes and when the timer runs out the quiz submits automatically. Your quiz consists of 2 subjects with 5 questions each. Good luck"
+            document.getElementById('startExamBtn').style.display = "block";
+            document.getElementById('subjectCheckboxes').style.display = "none";
+            document.getElementById('next').style.display = "none";
+
+            // Add event listener to the Start Exam button after it's displayed
+            document.getElementById('startExamBtn').addEventListener('click', function () {
+
+                document.getElementById('inst').style.display = "none";
+                document.getElementById('startExamBtn').style.display = "none"
+
+                const selectedSubjects = Array.from(checkboxes).map(checkbox => checkbox.value);
+                loadQuestions(selectedSubjects);
+            });
+        }
+
+        function loadQuestions(selectedSubjects) {
+            fetch('questions.json')
+                .then(response => response.json())
+                .then(data => {
+                    const examQuestionsDiv = document.getElementById('examQuestions');
+                    examQuestionsDiv.innerHTML = ''; // Clear previous questions
+
+                    selectedSubjects.forEach(subject => {
+                        const subjectData = data[subject];
+                        if (subjectData) {
+                            const questions = subjectData.questions;
+                            const subjectHeading = document.createElement('h2');
+                            subjectHeading.textContent = subject;
+                            examQuestionsDiv.appendChild(subjectHeading);
+
+                            questions.forEach((questionData, index) => {
+                                const questionDiv = document.createElement('div');
+                                questionDiv.textContent = `Question ${index + 1}: ${questionData.question}`;
+                                questionDiv.appendChild(document.createElement('br')); // Add line break after question
+                                // Create and append radio buttons for options
+                                questionData.options.forEach((option, optionIndex) => {
+                                    const optionLabel = document.createElement('label');
+                                    const optionRadio = document.createElement('input');
+                                    optionRadio.type = 'radio';
+                                    optionRadio.name = `option_${index}`;
+                                    optionRadio.value = option;
+                                    optionLabel.appendChild(optionRadio);
+                                    optionLabel.appendChild(document.createTextNode(option));
+                                    questionDiv.appendChild(optionLabel);
+                                    questionDiv.appendChild(document.createElement('br')); // Add <br> after each option
+                                });
+                                examQuestionsDiv.appendChild(questionDiv);
+                            });
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading questions:', error);
+                });
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
