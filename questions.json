@@ -1,0 +1,33 @@
+{
+    "Mathematics": {
+      "questions": [
+        {
+          "question": "What is 2 + 2?",
+          "options": ["A. 3", "B. 4", "C. 5", "D. 6"],
+          "answer": "B"
+        },
+        {
+          "question": "What is the square root of 25?",
+          "options": ["A. 3", "B. 4", "C. 5", "D. 6"],
+          "answer": "C"
+        }
+        
+      ]
+    },
+    "Science": {
+      "questions": [
+        {
+          "question": "What is the chemical symbol for water?",
+          "options": ["A. H2O", "B. CO2", "C. O2", "D. NaCl"],
+          "answer": "A"
+        },
+        {
+          "question": "What is the boiling point of water in Celsius?",
+          "options": ["A. 0°C", "B. 50°C", "C. 100°C", "D. 200°C"],
+          "answer": "C"
+        }
+        
+      ]
+    }
+  }
+  
