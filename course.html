@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Subjects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        .subject-category {
+            margin: 20px;
+            cursor: pointer; /* Add cursor pointer to indicate clickability */
+        }
+        .subject-category ul {
+            color: #2c3e50;
+            padding-left: 20px; /* Add some padding to align bullet points */
+            margin: 0; /* Remove default margin */
+        }
+        .subject-list {
+            list-style-type: none;
+            padding-left: 20px;
+            display: none; /* Hide subject lists initially */
+        }
+        .subject-list li {
+            margin: 5px 0;
+        }
+        .subject-list {
+            counter-reset: subject-counter; /* Initialize counter */
+        }
+        .subject-list li::before {
+            counter-increment: subject-counter; /* Increment counter */
+            content: counter(subject-counter) ". "; /* Display counter value */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>FACULTIES</h1>
+
+    <div class="subject-category" onclick="toggleSubjects('humanities')">
+        <ul>
+            <li>Humanities</li>
+        </ul>
+        <ul class="subject-list" id="humanities">
+            <li>Literature</li>
+            <li>History</li>
+            <li>Philosophy</li>
+            <li>Languages</li>
+            <li>Arts</li>
+        </ul>
+    </div>
+
+    <div class="subject-category" onclick="toggleSubjects('social-sciences')">
+        <ul>
+            <li>Social Sciences</li>
+        </ul>
+        <ul class="subject-list" id="social-sciences">
+            <li>Psychology</li>
+            <li>Sociology</li>
+            <li>Political Science</li>
+            <li>Economics</li>
+            <li>Anthropology</li>
+        </ul>
+    </div>
+
+    <div class="subject-category" onclick="toggleSubjects('natural-sciences')">
+        <ul>
+            <li>Natural Sciences</li>
+        </ul>
+        <ul class="subject-list" id="natural-sciences">
+            <li>Biology</li>
+            <li>Chemistry</li>
+            <li>Physics</li>
+            <li>Earth Sciences</li>
+            <li>Environmental Science</li>
+        </ul>
+    </div>
+
+    <div class="subject-category" onclick="toggleSubjects('formal-sciences')">
+        <ul>
+            <li>Formal Sciences</li>
+        </ul>
+        <ul class="subject-list" id="formal-sciences">
+            <li>Mathematics</li>
+            <li>Statistics</li>
+            <li>Computer Science</li>
+        </ul>
+    </div>
+
+    <div class="subject-category" onclick="toggleSubjects('applied-sciences')">
+        <ul>
+            <li>Applied Sciences</li>
+        </ul>
+        <ul class="subject-list" id="applied-sciences">
+            <li>Engineering</li>
+            <li>Medicine</li>
+            <li>Nursing</li>
+            <li>Architecture</li>
+            <li>Agricultural Science</li>
+        </ul>
+    </div>
+
+    <div class="subject-category" onclick="toggleSubjects('business-management')">
+        <ul>
+            <li>Business and Management</li>
+        </ul>
+        <ul class="subject-list" id="business-management">
+            <li>Business Administration</li>
+            <li>Finance</li>
+            <li>Marketing</li>
+            <li>Management</li>
+            <li>Human Resources</li>
+        </ul>
+    </div>
+
+    <div class="subject-category" onclick="toggleSubjects('law')">
+        <ul>
+            <li>Law</li>
+        </ul>
+        <ul class="subject-list" id="law">
+            <li>Criminal Law</li>
+            <li>International Law</li>
+            <li>Corporate Law</li>
+            <li>Civil Law</li>
+        </ul>
+    </div>
+
+    <div class="subject-category" onclick="toggleSubjects('education')">
+        <ul>
+            <li>Education</li>
+        </ul>
+        <ul class="subject-list" id="education">
+            <li>Early Childhood Education</li>
+            <li>Secondary Education</li>
+            <li>Special Education</li>
+            <li>Educational Leadership</li>
+        </ul>
+    </div>
+
+    <div class="subject-category" onclick="toggleSubjects('health-sciences')">
+        <ul>
+            <li>Health Sciences</li>
+        </ul>
+        <ul class="subject-list" id="health-sciences">
+            <li>Public Health</li>
+            <li>Pharmacy</li>
+            <li>Physical Therapy</li>
+            <li>Nutrition</li>
+        </ul>
+    </div>
+
+    <div class="subject-category" onclick="toggleSubjects('arts')">
+        <ul>
+            <li>Arts</li>
+        </ul>
+        <ul class="subject-list" id="arts">
+            <li>Visual Arts</li>
+            <li>Performing Arts</li>
+            <li>Music</li>
+            <li>Film Studies</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleSubjects(categoryId) {
+            var subjectCategories = document.getElementsByClassName('subject-list');
+            for (var i = 0; i < subjectCategories.length; i++) {
+                if (subjectCategories[i].id === categoryId) {
+                    subjectCategories[i].style.display = subjectCategories[i].style.display === 'block' ? 'none' : 'block';
+                } else {
+                    subjectCategories[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
