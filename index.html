@@ -4,181 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DREAMERS SCHOOL</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-        .mycontainers {
-            height: 100vh;
-            width: 96%;
-            margin-left: 20px;
-        }
-
-        nav {
-            background-color: #333;
-            height: 10vh;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-            /* margin-left: 55%; */
-        }
-
-
-        nav ul li {
-            float: left;
-        }
-
-        nav ul li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: large;
-
-        }
-
-        nav ul li a:hover {
-            background-color: #b8ec64;
-        }
-
-
-        .simage {
-            height: 60vh;
-            border-radius: 25vh;
-        }
-
-        .hidiv {
-            margin-left: 30px;
-            margin-top: 30px;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-
-        .carousel {
-            position: relative;
-            max-width: 600px;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        .carousel-container {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel-image {
-            width: 100%;
-            min-width: 100%;
-            height: 45vh;
-            object-fit: cover;
-        }
-
-        .carousel-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-        }
-
-        .carousel-button.prev {
-            left: 0;
-        }
-
-        .carousel-button.next {
-            right: 0;
-        }
-
-        @media (max-width: 768px) {
-            .form-container,
-            .user-details {
-                max-width: 90%;
-                margin: 0 auto;
-            }
-        }
-
-        @media (min-width: 769px) and (max-width: 1200px) {
-            .form-container,
-            .user-details {
-                max-width: 70%;
-                margin: 0 auto;
-            }
-        }
-    </style>
+    <title>Fit Fusion</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <div class="mycontainers">
-        <h2 style="text-align: center;">DREAMERS UNIVERSITY</h2>
-        <div>
-            <nav>
+    <div class="main">
+        <div class="header">
+            <div class="menu">
+                <div class="left-menu">
+                    <a class="menu-item">Home</a>
+                    <a class="menu-item">About Us</a>
+                    <a class="menu-item">Products</a>
+                    <a class="menu-item">Contact Us</a>
+                </div>
+                <div class="brand">
+                    <img class="logo" src="assets/fitfusion_logo.jpeg" alt="logo">
+                    <span>FitFusion</span>
+                </div>
+                <div class="right-menu">
+                    <a class="menu-item login">Login</a>
+                    <a class="menu-item best-seller">See best sell cloths</a>
+                </div>
+            </div>
+            <div class="info">
+                <div class="info-left">
+                    <span class="info-desc">Discover classic fashion clothes</span>
+                    <div class="avatar-btn">
+                        <div id="avatars">
+                            <img src="assets/female shirt.jpeg" alt="first">
+                            <img src="assets/female shirt.jpeg" alt="first">
+                            <img class="negative" src="assets/female shirt.jpeg" alt="first">
+                        </div>
+                        <button id="join-btn" class="join-btn">Join our team</button>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+                <div class="info-right">
+                    <span>Our latest blog and care</span>
+                    <span>We have products for all ages. Our assistants helps you to make the right choice</span>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="fcontent">
+                <span class="line"></span>
+                <span class="line2"></span>
+                <span class="fcontspan">featured work</span>
+            </div>
+            <div class="ncontent">
+                <span class="span">see more product</span>
+            </div>
+
+            <div class="content3">
                 <div>
+                    <span class="info-1">let's create <br> your own style</span>
                 </div>
-                <ul>
-                    <li><a href="/navlinks/about.html">ABOUT US</a></li>
-                    <li><a href="/navlinks/course.html">COURSES</a></li>
-                    <li><a href="/navlinks/regis.html">REGISTRATION</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div style="display: flex;">
-            <div class="hidiv">
-                <img src="/images/4034594.jpg" alt="" class="simage">
+                <div>
+                    <span class="info-2">we do not divide our collections to seasons <br> <br> we create new models every and we make them <br><br> in a
+                        few items to preserve their uniqueness</span>
+                </div>
             </div>
 
-            <div class="carousel">
-                <div class="carousel-container">
-                    <img src="/images/SeniorShowcase-feature1.jpg" class="carousel-image" alt="Event 1">
-                    <img src="/images/R.jpg" class="carousel-image" alt="Event 2">
-                    <img src="/images/R (1).jpg" class="carousel-image" alt="Event 3">
-                </div>
-                <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
-                <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+            <div class="content4">
+                <img src="/cohost3/fitfusion/assets/photo-1532074662130-17f5486532b0.avif" alt="" class="img1">
+                <img src="/cohost3/fitfusion/assets/photo-1618886614638-80e3c103d31a.avif" alt="" class="img2">
+                <img src="/cohost3/fitfusion/assets/premium_photo-1658506787944-7939ed84aaf8.avif" alt="" class="img3">
+                <img src="/cohost3/fitfusion/assets/premium_photo-1669850858863-6fe7bf233483.avif" alt="" class="img4">
             </div>
         </div>
-
     </div>
 </body>
-<script>
-    let currentIndex = 0;
 
-    function showSlide(index) {
-        const slides = document.querySelectorAll('.carousel-image');
-        if (index >= slides.length) {
-            currentIndex = 0;
-        } else if (index < 0) {
-            currentIndex = slides.length - 1;
-        } else {
-            currentIndex = index;
-        }
-
-        const carouselContainer = document.querySelector('.carousel-container');
-        carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-
-    function nextSlide() {
-        showSlide(currentIndex + 1);
-    }
-
-    function prevSlide() {
-        showSlide(currentIndex - 1);
-    }
-
-    // Automatically switch slides every 5 seconds
-    setInterval(nextSlide, 5000);
-</script>
 
 </html>
