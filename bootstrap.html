@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
+
+    <style>
+        .baskervville-sc-regular {
+            font-family: "Baskervville SC", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        #btn1:active {
+            background-color: rgb(236, 13, 91);
+        }
+
+        #btn2:hover {
+            background-color: darkgray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="studprofile.html">
+                    <img src="seminar_photos/avatar1.PNG" alt="Logo" style="width:40px;" class="rounded-pill">
+                </a>
+                <span class="navbar-text">Student Portal</span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <i class="fa fa-bars" style="font-size: 30px; color:white"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar" style="justify-content: center;">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="admpg.html">Admission page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="paymentpg.html">Payments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Course Registration</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="help.html">Help Desk</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">Academics</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Faculties</a></li>
+                                <li><a class="dropdown-item" href="#">Colleges</a></li>
+                                <li><a class="dropdown-item" href="#">Part-Time</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </form>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="col p-3">
+                <h1 class="baskervville-sc-regular" style="margin-top: 3%; margin-left: 12%;"> Welcome to the Student
+                    Portal</h1>
+                <div id="demo" class="carousel slide" data-bs-ride="carousel"
+                    style="width: 65%; padding-top: 2%; margin-left: 10%;">
+
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                    </div>
+
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="seminar_photos/carousel1.PNG" alt="coding" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="seminar_photos/carousel2.PNG" alt="students" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="seminar_photos/carousel3.PNG" alt="study" class="d-block" style="width:100%">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-sm-4 p-3">
+                <div class="card" style="width:400px; border-radius: 10%; margin-top: 3%; width: 80%;">
+                    <img class="card-img-top" src="seminar_photos/avatar1.PNG" alt="Card image"
+                        style="width:100%; padding: 2%; border-radius: 10%;">
+                    <center>
+                        <div class="card-body">
+                            <h4 class="card-title">OMOLE-OHONSI, Peace</h4>
+                            <p class="card-text">Click on see more to know more about the studentship of Peace.</p>
+                            <a href="studprofile.html" class="btn btn-primary">See Profile</a>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col p-3">
+                <div class="card" style="border-radius: 10%;">
+                    <div class="card-body">
+                        <h4 class="card-title">Personal Data</h4>
+                        <p class="card-text">Name <br> Phone number <br> Parent email</p>
+                        <a href="persdat.html"><Button class="btn btn-primary" id="btn1">See More</Button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col p-3">
+                <div class="card" style="border-radius: 10%;">
+                    <div class="card-body">
+                        <h4 class="card-title">Base data</h4>
+                        <p class="card-text">Matriculation number <br> Student ID <br> Course of Study</p>
+                        <a href="basedata.html"><Button class="btn btn-secondary" id="btn2">See More</Button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col p-3">
+                <div class="card" style="border-radius: 10%;">
+                    <div class="card-body">
+                        <h4 class="card-title">Admission Info</h4>
+                        <p class="card-text">Year of entry <br> Year of graduation <br>Faculty </p>
+                        <a href="adminfo.html"><button disabled>See More</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
