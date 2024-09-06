@@ -68,9 +68,11 @@
             <div id="hide">
                 <label for="emailInput" id="enterEmail">Enter Email:</label>
                 <input type="email" id="emailInput" placeholder="Your email">
-                <button onclick="retrieveData()" id="fetchdet" style="border: 1px solid; background-color: rgba(81, 142, 152, 0.3); border-radius: 10px;">Fetch Details</button>
+                <button onclick="retrieveData()" id="fetchdet"
+                    style="border: 1px solid; background-color: rgba(81, 142, 152, 0.3); border-radius: 10px;">Fetch
+                    Details</button>
             </div>
-            
+
             <table id="dataTable" class="table table-success table-bordered table-striped"
                 style="display: none; margin-top: 9px;">
                 <thead>
@@ -101,7 +103,9 @@
                 <tbody id="resultTableBody">
                 </tbody>
             </table>
-            <p id="averageScore" style="display: none; text-align: center; border: 1px solid; background-color: rgba(81, 142, 152, 0.3); border-radius: 10px; width: 200px; margin: auto;"></p>
+            <p id="averageScore"
+                style="display: none; text-align: center; border: 1px solid; background-color: rgba(81, 142, 152, 0.3); border-radius: 10px; width: 200px; margin: auto;">
+            </p>
         </div>
 
         <center>
@@ -120,6 +124,15 @@
                         <label for="">Other name :</label><br>
                         <input type="text" id="oname">
                     </div>
+                    <div id="gender">
+                        <label for="">Gender :</label><br>
+                        <div style=" border: 1px solid; border-radius: 10px; width: 37vh; height: 33px;">
+                            <input type="radio" name="gender" id="Male" style="width: 15px; height: 15px;">
+                            <label for="" style="margin-right: 10px;">Male</label>
+                            <input type="radio" name="gender" id="Female" style="width: 15px; height: 15px;">
+                            <label for="">Female</label>
+                        </div>
+                    </div>
                     <div>
                         <label for="">Email :</label><br>
                         <input type="email" id="email">
@@ -129,8 +142,21 @@
                         <input type="number">
                     </div>
                     <div>
-                        <label for="">date of birth :</label><br>
+                        <label for="">Date of Birth :</label><br>
                         <input type="date">
+                    </div>
+                    <div>
+                        <label for="">Disabilities :</label><br>
+                        <div style=" border: 1px solid; border-radius: 10px; width: 37vh; height: 33px;">
+                            <label for="">Blind</label>
+                            <input type="checkbox" name="" id="" style="width: 15px; height: 15px;">
+                            <label for="">Deaf</label>
+                            <input type="checkbox" name="" id="" style="width: 15px; height: 15px;">
+                            <label for="">Dumb</label>
+                            <input type="checkbox" name="" id="" style="width: 15px; height: 15px;">
+                            <label for="">Albino</label>
+                            <input type="checkbox" name="" id="" style="width: 15px; height: 15px;">
+                        </div>
                     </div>
                     <div>
                         <label for="">password:</label><br>
@@ -188,7 +214,7 @@
     function generateRegNumber() {
         // Check if all form fields are filled
         var allFieldsFilled = true;
-        var fields = document.querySelectorAll('input[type="text"], input[type="number"], input[type="date"], input[type="password"]');
+        var fields = document.querySelectorAll('input[type="text"], input[type="number"], input[type="radio"], input[type="date"], input[type="password"]');
         for (var i = 0; i < fields.length; i++) {
             if (fields[i].value.trim() === "") {
                 allFieldsFilled = false;
@@ -220,7 +246,7 @@
 
                 // Store the form data in array
                 localStorage.setItem(email, JSON.stringify(dataArray));
-                
+
             });
 
         } else {
